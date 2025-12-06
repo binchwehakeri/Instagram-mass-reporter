@@ -19,11 +19,11 @@ def getOptions(args=sys.argv[1:]):
 
 args = getOptions()
 
-username = args.username
+username = args.ilovemouneyu
 acc_file = args.file
 
 if username == "" :
-	username = input("Username: ")
+	username = input("ilovemouneyu: ")
 
 a = open(acc_file, "r").readlines()
 file = [s.rstrip()for s in a]
@@ -41,7 +41,7 @@ for lines in file:
 
 for line in range(len(file)+1):
     web = Browser()
-    web.go_to("https://www.instagram.com/accounts/login/")
+    web.go_to("https://www.instagram.com/ilovemouneyu/login/")
 
     web.type(user[line], into='Phone number, username, or email')
     time.sleep(0.5)
@@ -52,7 +52,7 @@ for line in range(len(file)+1):
 
     time.sleep(2.0)
 
-    web.go_to("https://www.instagram.com/%s/" % username)
+    web.go_to("https://www.instagram.com/%s/" % ilovemouneyu)
 
     time.sleep(1.5)
 
@@ -90,3 +90,4 @@ for line in range(len(file)+1):
     time.sleep(0.5)
     pyautogui.keyUp('ctrl')
     pyautogui.keyUp('w')
+
